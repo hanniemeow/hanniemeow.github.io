@@ -8,10 +8,25 @@
 <body>
     <script>
         let elem=document.createElement('div')
-        elem.style.width = '50px'
-        elem.style.height = '200px'
-        elem.style.backgroundColor = 'red'
-        document.body.append(elem)
+        elem.style.width = '50px';
+        elem.style.height = '200px';
+        elem.style.backgroundColor = 'red';
+        document.body.append(elem);
+
+        let names = ['Москва', 'Лондон', 'Рим', 'Санкт-Петербург', 'Пекин'];
+        let population = [13149803, 9648110, 2748109, 5597763, 22189082];
+
+        for(let i=0; i < 3; i++){
+        let elem2 = document.createElement('div')
+        elem2.innerText = names[i];
+        document.body.append(elem2);
+        }
+
+        for(let i=0; i < 3; i++){
+        let elem3 = document.createElement('div')
+        elem3.innerText = population[i];
+        document.body.append(elem3);
+        }
     </script> 
 </body>
 </html>
