@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="wheel.png" id="wheel">
+    <button onclick="stopWheel()">СТОП</button>
+    <button onclick="startWheel()">СТАРТ</button>
+</body>
+<script>
+    let wheel = document.getElementById('wheel');
+    let angle =0;
+
+    function rotateWheel(){
+        angle +=2;
+        wheel.style.transform='rotate(' + angle + 'deg)'
+    }
+    let timer;
+
+    function startWheel(){
+        timer = setInterval(rotateWheel, 1);
+    }
+
+    function stopWheel(){
+        clearInterval(timer)
+    }
+</script>
+</html>
